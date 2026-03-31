@@ -1,17 +1,21 @@
 import "./App.css"
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 function App() {
-  return (
-    <div>
+  const [dark, setDark] = useState(true)
 
-      {/* NAVBAR */}
+  return (
+    <div className={dark ? "dark" : "light"}>
+
+      {/* NAV */}
       <nav className="nav">
         <h2>Portfolio</h2>
         <div>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
+          <button onClick={() => setDark(!dark)}>🌗</button>
         </div>
       </nav>
 
@@ -21,16 +25,6 @@ function App() {
           Lakshmana Perumal A
         </motion.h1>
         <p>MERN Stack Developer</p>
-
-        <div className="buttons">
-          <a href="https://github.com/Lachu-Developer" target="_blank">
-            <button>GitHub</button>
-          </a>
-
-          <a href="/resume.pdf" download>
-            <button className="secondary">Resume</button>
-          </a>
-        </div>
       </section>
 
       {/* PROJECTS */}
@@ -38,16 +32,20 @@ function App() {
         <h2>Projects</h2>
 
         <div className="grid">
-          <div className="card">
-            <h3>Task Manager</h3>
-            <p>Full-stack MERN app with JWT auth & CRUD</p>
-            <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
-          </div>
 
-          <div className="card">
+          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+            <img src="https://via.placeholder.com/300" />
+            <h3>Task Manager</h3>
+            <p>JWT Auth + CRUD + Deployment</p>
+            <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
+          </motion.div>
+
+          <motion.div className="card" whileHover={{ scale: 1.05 }}>
+            <img src="/Users/lachu_leo/portfolio/src/assets/taskManager-project.png" />
             <h3>Auth System</h3>
-            <p>Login/signup with bcrypt & JWT</p>
-          </div>
+            <p>Login/signup using bcrypt & JWT</p>
+          </motion.div>
+
         </div>
       </section>
 
@@ -60,15 +58,19 @@ function App() {
           <span>Express</span>
           <span>MongoDB</span>
           <span>JWT</span>
-          <span>Git</span>
         </div>
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="section">
         <h2>Contact</h2>
-        <p>Email: xlakshmanaperumalx@gmail.com</p>
-        <p>Phone: +91 9360547401</p>
+
+        <form className="form">
+          <input placeholder="Your Name" />
+          <input placeholder="Your Email" />
+          <textarea placeholder="Message"></textarea>
+          <button>Send</button>
+        </form>
       </section>
 
     </div>
