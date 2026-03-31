@@ -1,76 +1,43 @@
 import "./App.css"
-import { motion } from "framer-motion"
-import { useState } from "react"
 
 function App() {
-  const [dark, setDark] = useState(true)
-
   return (
-    <div className={dark ? "dark" : "light"}>
+    <div className="container">
 
-      {/* NAV */}
-      <nav className="nav">
-        <h2>Portfolio</h2>
-        <div>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-          <button onClick={() => setDark(!dark)}>🌗</button>
-        </div>
-      </nav>
-
-      {/* HERO */}
-      <section className="hero">
-        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          Lakshmana Perumal A
-        </motion.h1>
+      {/* HEADER */}
+      <header className="header">
+        <h1>Lakshmana Perumal</h1>
         <p>MERN Stack Developer</p>
-      </section>
+      </header>
 
-      {/* PROJECTS */}
-      <section id="projects" className="section">
-        <h2>Projects</h2>
+      {/* PROJECT */}
+      <section className="section">
+        <h2>Project</h2>
 
-        <div className="grid">
+        <div className="project">
+          <h3>Task Manager</h3>
+          <p>
+            Full-stack MERN application with JWT authentication and CRUD operations.
+          </p>
 
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <img src="./assets/taskManager-project.png" />
-            <h3>Task Manager</h3>
-            <p>JWT Auth + CRUD + Deployment</p>
+          <div className="links">
             <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
-          </motion.div>
-
-          <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <img src="./assets/taskManager-project.png" />
-            <h3>Auth System</h3>
-            <p>Login/signup using bcrypt & JWT</p>
-          </motion.div>
-
+            <a href="https://github.com/Lachu-Developer" target="_blank">GitHub</a>
+          </div>
         </div>
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="section">
+      <section className="section">
         <h2>Skills</h2>
-        <div className="skills">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MongoDB</span>
-          <span>JWT</span>
-        </div>
+        <p>React · Node.js · Express · MongoDB · JWT · Git</p>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="section">
+      <section className="section">
         <h2>Contact</h2>
-
-        <form className="form">
-          <input placeholder="Your Name" />
-          <input placeholder="Your Email" />
-          <textarea placeholder="Message"></textarea>
-          <button>Send</button>
-        </form>
+        <p>Email: xlakshmanaperumalx@gmail.com</p>
+        <p>Phone: +91 9360547401</p>
       </section>
 
     </div>
