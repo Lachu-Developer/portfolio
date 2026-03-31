@@ -1,43 +1,62 @@
 import "./App.css"
+import { motion } from "framer-motion"
 
 function App() {
   return (
     <div className="container">
 
-      {/* HEADER */}
-      <header className="header">
-        <h1>Lakshmana Perumal</h1>
-        <p>MERN Stack Developer</p>
-      </header>
+      {/* HERO */}
+      <section className="hero">
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }}
+        >
+          Lakshmana Perumal
+        </motion.h1>
+
+        <motion.p 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }}
+        >
+          MERN Stack Developer
+        </motion.p>
+      </section>
 
       {/* PROJECT */}
       <section className="section">
-        <h2>Project</h2>
-
-        <div className="project">
-          <h3>Task Manager</h3>
+        <motion.div 
+          className="project"
+          initial={{ opacity: 0 }} 
+          whileInView={{ opacity: 1 }}
+        >
+          <h2>Task Manager</h2>
           <p>
-            Full-stack MERN application with JWT authentication and CRUD operations.
+            A full-stack application with JWT authentication and CRUD operations.
           </p>
 
           <div className="links">
-            <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
+            <a href="https://your-live-app.vercel.app" target="_blank">View Live</a>
             <a href="https://github.com/Lachu-Developer" target="_blank">GitHub</a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* SKILLS */}
       <section className="section">
-        <h2>Skills</h2>
-        <p>React · Node.js · Express · MongoDB · JWT · Git</p>
+        <h3>Skills</h3>
+        <p className="skills">
+          React · Node.js · Express · MongoDB · JWT · Git
+        </p>
       </section>
 
       {/* CONTACT */}
       <section className="section">
-        <h2>Contact</h2>
-        <p>Email: xlakshmanaperumalx@gmail.com</p>
-        <p>Phone: +91 9360547401</p>
+        <h3>Contact</h3>
+        <p className="contact">
+          xlakshmanaperumalx@gmail.com  
+          <br />
+          +91 9360547401
+        </p>
       </section>
 
     </div>
