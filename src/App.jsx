@@ -34,14 +34,14 @@ function App() {
         <div className="grid">
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <img src="https://via.placeholder.com/300" />
+            <img src="./assets/taskManager-project.png" />
             <h3>Task Manager</h3>
             <p>JWT Auth + CRUD + Deployment</p>
             <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
           </motion.div>
 
           <motion.div className="card" whileHover={{ scale: 1.05 }}>
-            <img src="/Users/lachu_leo/portfolio/src/assets/taskManager-project.png" />
+            <img src="./assets/taskManager-project.png" />
             <h3>Auth System</h3>
             <p>Login/signup using bcrypt & JWT</p>
           </motion.div>
