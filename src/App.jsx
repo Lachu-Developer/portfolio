@@ -3,15 +3,23 @@ import { motion } from "framer-motion"
 
 function App() {
   return (
-    <div className="container">
+    <div>
+
+      {/* NAVBAR */}
+      <nav className="nav">
+        <h2>Portfolio</h2>
+        <div>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
 
       {/* HERO */}
-      <motion.section 
-        className="hero"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1>Lakshmana Perumal A</h1>
+      <section className="hero">
+        <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          Lakshmana Perumal A
+        </motion.h1>
         <p>MERN Stack Developer</p>
 
         <div className="buttons">
@@ -20,31 +28,33 @@ function App() {
           </a>
 
           <a href="/resume.pdf" download>
-            <button className="secondary">Download Resume</button>
+            <button className="secondary">Resume</button>
           </a>
         </div>
-      </motion.section>
+      </section>
 
       {/* PROJECTS */}
-      <section className="projects">
+      <section id="projects" className="section">
         <h2>Projects</h2>
 
-        <motion.div className="card" whileHover={{ scale: 1.05 }}>
-          <h3>Task Manager</h3>
-          <p>JWT Auth + CRUD + Full-stack deployment</p>
-          <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
-        </motion.div>
+        <div className="grid">
+          <div className="card">
+            <h3>Task Manager</h3>
+            <p>Full-stack MERN app with JWT auth & CRUD</p>
+            <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
+          </div>
 
-        <motion.div className="card" whileHover={{ scale: 1.05 }}>
-          <h3>Auth System</h3>
-          <p>Secure login/signup using bcrypt & JWT</p>
-        </motion.div>
+          <div className="card">
+            <h3>Auth System</h3>
+            <p>Login/signup with bcrypt & JWT</p>
+          </div>
+        </div>
       </section>
 
       {/* SKILLS */}
-      <section className="skills">
+      <section id="skills" className="section">
         <h2>Skills</h2>
-        <div className="skills-list">
+        <div className="skills">
           <span>React</span>
           <span>Node.js</span>
           <span>Express</span>
@@ -55,7 +65,7 @@ function App() {
       </section>
 
       {/* CONTACT */}
-      <section className="contact">
+      <section id="contact" className="section">
         <h2>Contact</h2>
         <p>Email: xlakshmanaperumalx@gmail.com</p>
         <p>Phone: +91 9360547401</p>
