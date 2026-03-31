@@ -3,69 +3,77 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
   background: #fff;
   color: #1d1d1f;
+  scroll-behavior: smooth;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 80px 20px;
+/* NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1d1d1f;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  margin-bottom: 100px;
+  padding: 120px 20px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 600;
-  margin: 0;
 }
 
 .hero p {
-  font-size: 20px;
   color: #6e6e73;
-  margin-top: 10px;
+  font-size: 18px;
 }
 
 /* SECTION */
 .section {
-  margin-bottom: 80px;
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* PROJECT */
-.project h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+/* CARD */
+.card {
+  background: #f5f5f7;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-.project p {
-  color: #6e6e73;
-  line-height: 1.6;
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* LINKS */
 .links a {
   margin-right: 20px;
-  text-decoration: none;
   color: #0071e3;
-  font-weight: 500;
-}
-
-.links a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* SKILLS */
-.skills {
-  color: #6e6e73;
-  font-size: 16px;
+.skills span {
+  margin: 5px;
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border-radius: 6px;
 }
 
 /* CONTACT */
 .contact {
   color: #6e6e73;
-  line-height: 1.6;
 }
