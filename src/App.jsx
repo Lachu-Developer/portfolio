@@ -49,7 +49,7 @@ function App() {
           </p>
 
           <div className="links">
-            <a href="https://your-live-app.vercel.app" target="_blank">Live</a>
+            <a href="https://task-frontend-seven-dusky.vercel.app/" target="_blank">Live</a>
             <a href="https://github.com/Lachu-Developer" target="_blank">Code</a>
           </div>
         </motion.div>
